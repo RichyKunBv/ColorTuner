@@ -84,6 +84,15 @@ if "%opt%"=="7" set "TARGET_KEY=WindowText" & goto :MODIFY_MENU
 if /i "%opt%"=="R" goto :RESTORE_FACTORY
 if /i "%opt%"=="S" goto :REFRESH_SYSTEM
 if /i "%opt%"=="U" goto :ACTUALIZAR
+if /i "%opt%"=="666" (
+    echo ╔══════════════════════════════════════════════╗
+    echo ║  ¡Encontraste el easter egg!                ║
+    echo ║  Si funciona, es pura suerte.               ║
+    echo ║  Si no, bueno... ya sabes.                  ║
+    echo ╚══════════════════════════════════════════════╝
+    pause
+    goto :MAIN_MENU
+)
 if "%opt%"=="0" exit /b
 goto :MAIN_MENU
 
@@ -361,4 +370,5 @@ del "%tempVersionFile%" >nul 2>&1
 echo.
 pause
 goto MAIN_MENU
+
 
